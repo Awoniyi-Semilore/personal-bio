@@ -3,240 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awoniyi Semilore | Portfolio & Contact</title>
-    <!-- Google Fonts for that premium feel -->
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #050505;
-            --accent: #ff3e00; /* Bold Red-Orange */
-            --text: #ffffff;
-            --secondary: #a0a0a0;
-            --glass: rgba(255, 255, 255, 0.03);
-            --border: rgba(255, 255, 255, 0.1);
-        }
+    <meta name="description" content="Awoniyi Semilore — Creative Strategist and Frontend Developer based in Nigeria. Specializing in bold, functional interfaces at the intersection of design and code.">
+    <title>Awoniyi Semilore | Frontend Developer & Creative Strategist</title>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
+    <!-- Favicon (inline SVG data URI — no extra file needed) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23050505'/><text y='72' x='10' font-size='70' font-family='serif' fill='%23ff3e00'>A</text></svg>">
 
-        body {
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
 
-        h1, h2, h3 {
-            font-family: 'Space+Grotesk', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: -1px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        /* Hero Section */
-        header {
-            margin-bottom: 80px;
-            border-left: 4px solid var(--accent);
-            padding-left: 20px;
-        }
-
-        header h1 {
-            font-size: clamp(2.5rem, 8vw, 4rem);
-            line-height: 1;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            color: var(--secondary);
-            font-size: 1.2rem;
-            max-width: 500px;
-        }
-
-        /* Bio Section */
-        .bio-section {
-            margin-bottom: 60px;
-        }
-
-        .bio-section h2 {
-            font-size: 0.9rem;
-            color: var(--accent);
-            margin-bottom: 20px;
-            letter-spacing: 2px;
-        }
-
-        .bio-content {
-            font-size: 1.1rem;
-            color: #ececec;
-        }
-
-        /* Socials */
-        .socials {
-            display: flex;
-            gap: 20px;
-            margin-top: 30px;
-            list-style: none;
-        }
-
-        .socials a {
-            color: var(--text);
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.9rem;
-            border-bottom: 1px solid var(--border);
-            transition: 0.3s;
-        }
-
-        .socials a:hover {
-            color: var(--accent);
-            border-color: var(--accent);
-        }
-
-        /* Form Styling - The Core Requirement */
-        .contact-card {
-            background: var(--glass);
-            border: 1px solid var(--border);
-            padding: 40px;
-            border-radius: 2px;
-            backdrop-filter: blur(10px);
-        }
-
-        .contact-card h3 {
-            margin-bottom: 30px;
-            font-size: 1.5rem;
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-            position: relative;
-        }
-
-        label {
-            display: block;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 8px;
-            letter-spacing: 1px;
-        }
-
-        input, textarea, select {
-            width: 100%;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid var(--border);
-            padding: 15px;
-            color: white;
-            font-size: 1rem;
-            outline: none;
-            transition: 0.3s;
-        }
-
-        input:focus, textarea:focus {
-            border-color: var(--accent);
-            background: rgba(255,255,255,0.08);
-        }
-
-        button {
-            background: var(--accent);
-            color: white;
-            border: none;
-            padding: 18px 40px;
-            font-weight: 700;
-            text-transform: uppercase;
-            cursor: pointer;
-            width: 100%;
-            font-size: 1rem;
-            letter-spacing: 1px;
-            transition: transform 0.2s, opacity 0.2s;
-        }
-
-        button:active {
-            transform: scale(0.98);
-        }
-
-        footer {
-            margin-top: 100px;
-            text-align: center;
-            font-size: 0.8rem;
-            color: var(--secondary);
-            border-top: 1px solid var(--border);
-            padding-top: 20px;
-        }
-
-        /* Mobile Adjustments */
-        @media (max-width: 600px) {
-            .contact-card {
-                padding: 25px;
-            }
-        }
-    </style>
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <!-- =====================
+         SKIP NAV (a11y)
+    ===================== -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <div class="container">
-        <header>
-            <h1>Awoniyi<br>Semilore.</h1>
-            <p>Creative Strategist & Frontend Developer. Boldly defining the intersection of design and functionality.</p>
+
+        <!-- =====================
+             SITE HEADER
+        ===================== -->
+        <header role="banner">
+            <div class="header-inner">
+                <p class="site-label" aria-label="Site owner">AS.</p>
+
+                <!-- PRIMARY NAVIGATION -->
+                <nav aria-label="Primary navigation">
+                    <ul class="nav-list">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
 
-        <section class="bio-section">
-            <h2>The Identity</h2>
-            <div class="bio-content">
-                <p>Based in Nigeria, I am a professional committed to pushing the boundaries of what is possible in the digital space. I specialize in building interfaces that don't just work, but command attention.</p>
-            </div>
-            
-            <ul class="socials">
-                <li><a href="#">LinkedIn: Awoniyi Semilore</a></li>
-                <li><a href="#">instgram: @Awoniyi Semilore</a></li>
-                <li><a href="#">GitHub: Awoniyi Semilore</a></li>
-            </ul>
-        </section>
+        <!-- =====================
+             MAIN CONTENT
+        ===================== -->
+        <main id="main-content">
 
-        <section class="contact-card">
-            <h3>Initiate Contact</h3>
-            <form action="#" method="post">
-                <div class="form-group">
-                    <label for="full-name">Full Name</label>
-                    <input type="text" id="full-name" name="name" value="Awoniyi Semilore" required>
+            <!-- HERO -->
+            <section class="hero" aria-labelledby="hero-heading">
+                <h1 id="hero-heading">
+                    Awoniyi<br>
+                    <span class="accent-text">Semilore.</span>
+                </h1>
+                <p class="hero-sub">Creative Strategist &amp; Frontend Developer.<br>Boldly defining the intersection of design and functionality.</p>
+            </section>
+
+            <!-- ABOUT -->
+            <section class="bio-section" id="about" aria-labelledby="about-heading">
+                <h2 id="about-heading">The Identity</h2>
+                <div class="bio-content">
+                    <p>Based in Nigeria, I am a professional committed to pushing the boundaries of what is possible in the digital space. I specialize in building interfaces that don't just work — they command attention.</p>
                 </div>
 
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" value="semiloreawoniyi@gmail.com" required>
+                <ul class="socials" aria-label="Social media links">
+                    <li><a href="#" rel="noopener noreferrer" aria-label="Connect on LinkedIn">LinkedIn</a></li>
+                    <li><a href="#" rel="noopener noreferrer" aria-label="Follow on Instagram">Instagram</a></li>
+                    <li><a href="#" rel="noopener noreferrer" aria-label="View GitHub profile">GitHub</a></li>
+                </ul>
+            </section>
+
+            <!-- SKILLS -->
+            <section class="skills-section" id="skills" aria-labelledby="skills-heading">
+                <h2 id="skills-heading">Capabilities</h2>
+                <ul class="skills-list" aria-label="Technical skills">
+                    <li>Frontend Development</li>
+                    <li>UI/UX Design</li>
+                    <li>Creative Strategy</li>
+                    <li>Brand Identity</li>
+                    <li>React &amp; Vite</li>
+                    <li>Accessibility (a11y)</li>
+                </ul>
+            </section>
+
+            <!-- CONTACT FORM -->
+            <section class="contact-section" id="contact" aria-labelledby="contact-heading">
+                <h2 id="contact-heading">Initiate Contact</h2>
+
+                <div class="contact-card">
+                    <form action="#" method="post" novalidate>
+
+                        <!-- Full Name -->
+                        <div class="form-group">
+                            <label for="full-name">Full Name <span aria-hidden="true">*</span></label>
+                            <input
+                                type="text"
+                                id="full-name"
+                                name="name"
+                                placeholder="Your full name"
+                                required
+                                minlength="2"
+                                autocomplete="name"
+                                aria-required="true"
+                            >
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="your@email.com"
+                                required
+                                autocomplete="email"
+                                aria-required="true"
+                            >
+                        </div>
+
+                        <!-- Subject / Inquiry Type -->
+                        <div class="form-group">
+                            <label for="subject">Inquiry Type</label>
+                            <select id="subject" name="subject" aria-label="Select inquiry type">
+                                <option value="">— Select one —</option>
+                                <option value="collaboration">Project Collaboration</option>
+                                <option value="speaking">Speaking Engagement</option>
+                                <option value="general">General Inquiry</option>
+                            </select>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="form-group">
+                            <label for="message">Message <span aria-hidden="true">*</span></label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="5"
+                                placeholder="State your purpose..."
+                                required
+                                minlength="10"
+                                aria-required="true"
+                            ></textarea>
+                        </div>
+
+                        <button type="submit">Send Message</button>
+
+                    </form>
                 </div>
+            </section>
 
-                <div class="form-group">
-                    <label for="subject">Inquiry Type</label>
-                    <select id="subject" name="subject">
-                        <option value="collaboration">Project Collaboration</option>
-                        <option value="speaking">Speaking Engagement</option>
-                        <option value="general">General Inquiry</option>
-                    </select>
-                </div>
+        </main>
 
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" placeholder="State your purpose..."></textarea>
-                </div>
-
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-
-        <footer>
-            &copy; 2026 Awoniyi Semilore. Built with precision.
+        <!-- =====================
+             SITE FOOTER
+        ===================== -->
+        <footer role="contentinfo">
+            <p>&copy; 2026 Awoniyi Semilore. Built with precision.</p>
         </footer>
-    </div>
+
+    </div><!-- /.container -->
 
 </body>
 </html>
-
